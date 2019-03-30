@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.prateek.ifit">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,6 +10,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -17,10 +21,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dashboard.SetContactsActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".adapter.DoctorChatActivity" />
-        <activity android:name=".adapter.ViewDoctorActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,17 +35,31 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".NearbyStoresActivity"
+            android:label="@string/title_activity_nearby_stores"></activity>
+        <activity android:name=".PedometerActivity" />
+        <activity android:name=".navattr.PDFReaderActivity" />
+        <activity android:name=".navattr.PrecriptionActivity" />
+        <activity
+            android:name=".dashboard.SetContactsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".adapter.DoctorChatActivity" />
+        <activity android:name=".adapter.ViewDoctorActivity" />
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".adapter.BedViewActivity" />
         <activity android:name=".navattr.ContactDoctor" />
-        <activity android:name=".navattr.BloodDonation"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".navattr.BloodDonation"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".navattr.ChatActivity" />
-        <activity android:name=".navattr.GetBedActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".dashboard.ProfileActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".navattr.GetBedActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".dashboard.ProfileActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".dashboard.DetailsActivity" />
         <activity
             android:name=".Welcome.SignUpActivity"
@@ -62,6 +77,8 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".navattr.AyurvedaActivity" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
     </application>
 
 </manifest>

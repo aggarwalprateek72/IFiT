@@ -8,7 +8,7 @@
     android:layout_marginRight="3dp">
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:elevation="12dp"
@@ -172,6 +172,6 @@
                     android:text="Get Ambulance" />
             </LinearLayout>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

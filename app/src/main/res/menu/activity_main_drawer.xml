@@ -12,20 +12,41 @@
             android:id="@+id/get_ambulance"
             android:icon="@drawable/ic_call_ambulance_black_24dp"
             android:title="Get an Ambulance" />
-        --><item
+        -->
+        <item
             android:id="@+id/ask_doctor"
             android:icon="@drawable/ic_tak_doctor_black_24dp"
             android:title="Look for a Doctor" />
-        <item
-            android:id="@+id/chatbot"
-            android:icon="@drawable/ic_chat_black_24dp"
-            android:title="Feeling Low? Let's Talk" />
+
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_blood_black_24dp"
             android:title="Request Blood" />
 
     </group>
+
+    <item android:title="Self Assistance">
+
+        <menu>
+        <item
+            android:id="@+id/chatbot"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Feeling Low? Let's Talk" />
+
+        <item
+            android:id="@+id/nav_ayurveda"
+            android:icon="@drawable/ic_spa_black_24dp"
+            android:title="Ayurvedic Treaments" />
+
+        <item
+            android:id="@+id/nav_savepdf"
+            android:icon="@drawable/ic_report_as_pdf_black_24dp"
+            android:title="My Reports" />
+
+        </menu>
+
+    </item>
+
 
     <item android:title="Communicate">
         <menu>

@@ -7,17 +7,17 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.core.app.NotificationCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
@@ -25,16 +25,18 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.prateek.ifit.chatbot.Welcome;
 import com.prateek.ifit.dashboard.DetailsActivity;
 import com.prateek.ifit.dashboard.Function;
 import com.prateek.ifit.dashboard.ListNewsAdapter;
 import com.prateek.ifit.dashboard.ProfileActivity;
 import com.prateek.ifit.dashboard.SetContactsActivity;
+import com.prateek.ifit.navattr.AyurvedaActivity;
 import com.prateek.ifit.navattr.BloodDonation;
 import com.prateek.ifit.navattr.ChatActivity;
 import com.prateek.ifit.navattr.ContactDoctor;
 import com.prateek.ifit.navattr.GetBedActivity;
+import com.prateek.ifit.navattr.PDFReaderActivity;
+import com.prateek.ifit.navattr.PrecriptionActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -144,6 +146,15 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             return true;
         }
+        if(id==R.id.camera_image){
+            Intent intent= new Intent(MainActivity.this, PrecriptionActivity.class);
+            startActivity(intent);
+        }
+        if(id==R.id.pedometer){
+            Intent intent= new Intent(MainActivity.this,PedometerActivity.class );
+            startActivity(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -170,6 +181,10 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, BloodDonation.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_ayurveda) {
+            Intent intent = new Intent(MainActivity.this, AyurvedaActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_send) {
             try {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -182,6 +197,10 @@ public class MainActivity extends AppCompatActivity
             } catch (Exception e) {
                 //e.toString();
             }
+
+        }else if(id==R.id.nav_savepdf){
+            Intent intent= new Intent(MainActivity.this, PDFReaderActivity.class);
+            startActivity(intent);
 
         }
 
