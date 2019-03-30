@@ -35,8 +35,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".ambulancetracking.AmbulanceMapActivity"
+            android:label="@string/title_activity_ambulance_map"></activity>
+        <activity
             android:name=".NearbyStoresActivity"
-            android:label="@string/title_activity_nearby_stores"></activity>
+            android:label="@string/title_activity_nearby_stores" />
         <activity android:name=".PedometerActivity" />
         <activity android:name=".navattr.PDFReaderActivity" />
         <activity android:name=".navattr.PrecriptionActivity" />

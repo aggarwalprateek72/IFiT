@@ -7,17 +7,22 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.core.app.NotificationCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.view.View;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
@@ -25,6 +30,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.prateek.ifit.ambulancetracking.AmbulanceMapActivity;
 import com.prateek.ifit.dashboard.DetailsActivity;
 import com.prateek.ifit.dashboard.Function;
 import com.prateek.ifit.dashboard.ListNewsAdapter;
@@ -146,12 +152,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             return true;
         }
-        if(id==R.id.camera_image){
-            Intent intent= new Intent(MainActivity.this, PrecriptionActivity.class);
+        if (id == R.id.camera_image) {
+            Intent intent = new Intent(MainActivity.this, PrecriptionActivity.class);
             startActivity(intent);
         }
-        if(id==R.id.pedometer){
-            Intent intent= new Intent(MainActivity.this,PedometerActivity.class );
+        if (id == R.id.pedometer) {
+            Intent intent = new Intent(MainActivity.this, PedometerActivity.class);
             startActivity(intent);
         }
 
@@ -198,8 +204,8 @@ public class MainActivity extends AppCompatActivity
                 //e.toString();
             }
 
-        }else if(id==R.id.nav_savepdf){
-            Intent intent= new Intent(MainActivity.this, PDFReaderActivity.class);
+        } else if (id == R.id.nav_savepdf) {
+            Intent intent = new Intent(MainActivity.this, PDFReaderActivity.class);
             startActivity(intent);
 
         }
@@ -232,6 +238,10 @@ public class MainActivity extends AppCompatActivity
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, notificationBuilder.build());
+
+        Intent intent = new Intent(MainActivity.this, AmbulanceMapActivity.class);
+        startActivity(intent);
+
     }
 
     public void emergencycall(View view) {

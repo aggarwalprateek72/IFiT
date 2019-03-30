@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Handler;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.prateek.ifit.R;
+import com.prateek.ifit.ambulancetracking.AmbulanceMapActivity;
 import com.prateek.ifit.dao.GetBedDao;
 
 import java.util.ArrayList;
@@ -59,6 +62,9 @@ public class GetBedAdapter extends RecyclerView.Adapter<GetBedAdapter.ViewHolder
                 AmbnotificationCall();
 
                 Toast.makeText(context, "The Ambulance will arrive soon", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, AmbulanceMapActivity.class);
+                context.startActivity(intent);
             }
         });
 
