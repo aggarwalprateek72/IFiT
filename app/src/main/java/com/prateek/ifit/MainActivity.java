@@ -30,6 +30,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.prateek.ifit.CrashAlert.Crash;
 import com.prateek.ifit.TestingReports.TestMain;
 import com.prateek.ifit.ambulancetracking.AmbulanceMapActivity;
 import com.prateek.ifit.dashboard.DetailsActivity;
@@ -214,6 +215,9 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, TestMain.class);
             startActivity(intent);
 
+        } else if (id == R.id.accident){
+            Intent intent = new Intent(MainActivity.this, Crash.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

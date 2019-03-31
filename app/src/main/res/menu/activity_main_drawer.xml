@@ -23,6 +23,11 @@
             android:icon="@drawable/ic_blood_black_24dp"
             android:title="Request Blood" />
 
+        <item
+            android:id="@+id/accident"
+            android:icon="@drawable/ic_ambulance_black_24dp"
+            android:title="Accident Alerts" />
+
     </group>
 
     <item android:title="Self Assistance">
