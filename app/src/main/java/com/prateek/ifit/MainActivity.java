@@ -30,6 +30,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.prateek.ifit.TestingReports.TestMain;
 import com.prateek.ifit.ambulancetracking.AmbulanceMapActivity;
 import com.prateek.ifit.dashboard.DetailsActivity;
 import com.prateek.ifit.dashboard.Function;
@@ -43,6 +44,7 @@ import com.prateek.ifit.navattr.ContactDoctor;
 import com.prateek.ifit.navattr.GetBedActivity;
 import com.prateek.ifit.navattr.PDFReaderActivity;
 import com.prateek.ifit.navattr.PrecriptionActivity;
+import com.prateek.ifit.reminders.AlarmMainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -208,11 +210,16 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, PDFReaderActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_testnscans) {
+            Intent intent = new Intent(MainActivity.this, TestMain.class);
+            startActivity(intent);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
 
     public void AskBed(View view) {

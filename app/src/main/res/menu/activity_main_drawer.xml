@@ -43,6 +43,17 @@
             android:icon="@drawable/ic_report_as_pdf_black_24dp"
             android:title="My Reports" />
 
+           <!-- <item
+                android:id="@+id/nav_reminders"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="My Reminders"/>
+-->
+
+            <item
+                android:id="@+id/nav_testnscans"
+                android:icon="@drawable/ic_report_black_24dp"
+                android:title="Book a Test"/>
+
         </menu>
 
     </item>
